@@ -1,0 +1,12 @@
+version: '3'
+volumes:
+  node_output:
+    driver: local
+
+services:
+  tests:
+    build: .
+    working_dir: /app
+    user: root
+    volumes:
+         - .:/app
